@@ -14,7 +14,7 @@ type Task struct {
 	ID          int64      `json:"id"`
 	Title       string     `json:"title"`
 	Description *string     `json:"description"`
-	Status      string     `json:"status"`
+	Status      Status     `json:"status"`
 	DueDate     *time.Time `json:"due_date"`
 	CreatedAt   time.Time  `json:"created_at"`
 	UpdatedAt   time.Time  `json:"updated_at"`
@@ -30,5 +30,5 @@ type UpdateRequest struct {
 	Title string `json:"title"`
 	Description *string `json:"description"`
 	DueDate *time.Time `json:"due_date"`
-	Status      string     `json:"status"`
+	Status      Status     `json:"status"`
 }
